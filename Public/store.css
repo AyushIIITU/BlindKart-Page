@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* filter: blur(10px); */
+  /* background-color: #0056b3; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e1e1f2;
+  
+  color: #333;
+}
+
+.blindupper {
+  height: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 60px;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgb(23, 24, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product-box1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-top: 110px;
+  border-radius: 2vh;
+}
+.product-box2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+  
+  /* margin-top: 110px; */
+}
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(rgb(82, 19, 178), rgb(103, 12, 173), rgb(16, 160, 185));
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(120, 70, 70, 0.1);
+  border-radius: 2vh;
+  color: #fff;
+}
+
+.product img {
+  max-width: 100%;
+  height: 270px;
+  box-shadow: #a21c1c;
+  border-radius: 20px;
+}
+
+.product p {
+  margin: 10px 0;
+}
+
+.product button {
+  background-color: #00ff51;
+  color: black;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  height: 45px;
+
+  /* width: 78px; */
+  /* width: 25%; */
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+}
+
+.shopping-cart h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.shopping-cart {
+  position: relative;
+  justify-content: center;
+}
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+}
+
+#checkout-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 50px;
+  height: 100px;
+  width: 100%;
+  display: block;
+  border-radius: 10%;
+  margin: 0 auto;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
+  justify-content: center;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+}

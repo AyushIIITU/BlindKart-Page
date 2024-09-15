@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Page</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  
+}
+
+h2 {
+    color: #bf0c0c;
+    font-size: 4.3vh;
+    display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
+  /* align-items: center; */
+    
+}
+h1{
+  color: #74067d;
+  font-size: 8vh;
+  font-family: 'Pacifico', cursive;
+  padding: 0px;
+  margin-top:1vh ;
+  margin-bottom: 1vh;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#cart-items {
+  list-style: none;
+    padding: 0;
+    /* color: rosybrown; */
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    font-size: 4lvh;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    
+    margin-bottom: 1.2vh;
+    font-size: larger;
+    font-family: cursive;
+    display: flex;
+    justify-content: space-around; 
+    align-content: flex-end; 
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    /* margin-bottom: 15px; */
+    box-sizing: border-box;
+}
+
+/* button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    align-content: center;
+} */
+button {
+    background-color: #282ca7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 4vh;
+    margin-top: 5vh;
+    /* max-width: 300px;  */
+    height: 100px;
+    width: 100%;
+    display: block;
+    border-radius: 9%;
+    /* margin: 0 auto;  */
+}
+button:hover {
+    background-color: #2e5cb3;
+    align-content: center;
+}
+.totalprice{
+    font-size: xx-large;
+    font-style: italic;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Billing Page</h1>
+
+    <div>
+        <h2>Cart Items</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added dynamically -->
+        </ul>
+    </div>
+    <div class="totalprice">
+            <!-- totalprice will be added dynamically -->
+    </div>
+    <div>
+        <h2>Shipping Information</h2>
+        <form id="billing-form">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <button type="submit">Proceed to Checkout</button>
+
+<div class="keyboard">
+  <!-- <div class="keyboard__row keyboard__row--h1">
+    <div data-key="27" class="key--word">
+      <span>esc</span>
+    </div>
+    <div data-key="112" class="key--fn">
+      <span>F1</span>
+    </div>
+    <div data-key="113" class="key--fn">
+      <span>F2</span>
+    </div>
+    <div data-key="114" class="key--fn">
+      <span>F3</span>
+    </div>
+    <div data-key="115" class="key--fn">
+      <span>F4</span>
+    </div>
+    <div data-key="116" class="key--fn">
+      <span>F5</span>
+    </div>
+    <div data-key="117" class="key--fn">
+      <span>F6</span>
+    </div>
+    <div data-key="118" class="key--fn">
+      <span>F7</span>
+    </div>
+    <div data-key="119" class="key--fn">
+      <span>F8</span>
+    </div>
+    <div data-key="120" class="key--fn">
+      <span>F9</span>
+    </div>
+    <div data-key="121" class="key--fn">
+      <span>F10</span>
+    </div>
+    <div data-key="122" class="key--fn">
+      <span>F11</span>
+    </div>
+    <div data-key="123" class="key--fn">
+      <span>F12</span>
+    </div>
+    <div data-key="n/a" class="key--word">
+      <span>pwr</span>
+    </div>
+  </div> -->
+  <div class="keyboard__row">
+    <!-- <div class="key--double" data-key="192">
+      <div>~</div>
+      <div>`</div>
+    </div> -->
+    <div class="key--double" data-key="49">
+      <div>!</div>
+      <div>1</div>
+    </div>
+    <div class="key--double" data-key="50">
+      <div>@</div>
+      <div>2</div>
+    </div>
+    <div class="key--double" data-key="51">
+      <div>#</div>
+      <div>3</div>
+    </div>
+    <div class="key--double" data-key="52">
+      <div>$</div>
+      <div>4</div>
+    </div>
+    <div class="key--double" data-key="53">
+      <div>%</div>
+      <div>5</div>
+    </div>
+    <div class="key--double" data-key="54">
+      <div>^</div>
+      <div>6</div>
+    </div>
+    <div class="key--double" data-key="55">
+      <div>&</div>
+      <div>7</div>
+    </div>
+    <div class="key--double" data-key="56">
+      <div>*</div>
+      <div>8</div>
+    </div>
+    <div class="key--double" data-key="57">
+      <div>(</div>
+      <div>9</div>
+    </div>
+    <div class="key--double" data-key="48">
+      <div>)</div>
+      <div>0</div>
+    </div>
+    <!-- <div class="key--double" data-key="189">
+      <div>_</div>
+      <div>-</div>
+    </div> -->
+    <!-- <div class="key--double" data-key="187">
+      <div>+</div>
+      <div>=</div>
+    </div> -->
+    <div class="key--double-right key--word key--w4" data-key="8">
+      <div>delete</div>
+    </div>
+  </div>
+   <br>
+  <div class="keyboard__row">
+    <!-- <div class="key--bottom-left key--word key--w4" data-key="9">
+      <span>tab</span>
+    </div> -->
+    <div class="key--letter" data-char="Q">Q</div>
+    <div class="key--letter" data-char="W">W</div>
+    <div class="key--letter" data-char="E">E</div>
+    <div class="key--letter" data-char="R">R</div>
+    <div class="key--letter" data-char="T">T</div>
+    <div class="key--letter" data-char="Y">Y</div>
+    <div class="key--letter" data-char="U">U</div>
+    <div class="key--letter" data-char="I">I</div>
+    <div class="key--letter" data-char="O">O</div>
+    <div class="key--letter" data-char="P">P</div>
+    <!-- <div class="key--double" data-key="219" data-char="{[">
+      <div>{</div>
+      <div>[</div>
+    </div> -->
+    <!-- <div class="key--double" data-key="221" data-char="}]">
+      <div>}</div>
+      <div>]</div>
+    </div> -->
+    <!-- <div class="key--double" data-key="220" data-char="|\">
+      <div>|</div>
+      <div>\</div>
+    </div> -->
+  </div>
+  <br>
+  <div class="keyboard__row">
+    <div class="key--bottom-left key--word key--w5" data-key="20">
+      <span>caps lock</span>
+    </div>
+    <div class="key--letter" data-char="A">A</div>
+    <div class="key--letter" data-char="S">S</div>
+    <div class="key--letter" data-char="D">D</div>
+    <div class="key--letter" data-char="F">F</div>
+    <div class="key--letter" data-char="G">G</div>
+    <div class="key--letter" data-char="H">H</div>
+    <div class="key--letter" data-char="J">J</div>
+    <div class="key--letter" data-char="K">K</div>
+    <div class="key--letter" data-char="L">L</div>
+    <!-- <div class="key--double" data-key="186">
+      <div>:</div>
+      <div>;</div>
+    </div>
+    <div class="key--double" data-key="222">
+      <div>"</div>
+      <div>'</div>
+    </div> -->
+    <div class="key--bottom-right key--word key--w5" data-key="13">
+      <span>return</span>
+    </div>
+  </div>
+  <br>
+  <div class="keyboard__row">
+    <div class="key--bottom-left key--word key--w6" data-key="16">
+      <span>shift</span>
+    </div>
+    <div class="key--letter" data-char="Z">Z</div>
+    <div class="key--letter" data-char="X">X</div>
+    <div class="key--letter" data-char="C">C</div>
+    <div class="key--letter" data-char="V">V</div>
+    <div class="key--letter" data-char="B">B</div>
+    <div class="key--letter" data-char="N">N</div>
+    <div class="key--letter" data-char="M">M</div>
+    <!-- <div class="key--double" data-key="188">
+      <div>&lt;</div>
+      <div>,</div>
+    </div>
+    <div class="key--double" data-key="190">
+      <div>&gt;</div>
+      <div>.</div>
+    </div> -->
+    <!-- <div class="key--double" data-key="191">
+      <div>?</div>
+      <div>/</div>
+    </div> -->
+    <div class="key--bottom-right key--word key--w6" data-key="16-R">
+      <span>shift</span>
+    </div>
+  </div>
+  <br>
+  <div class="keyboard__row keyboard__row--h3">
+    <div class="key--bottom-left key--word">
+      <span>fn</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="17">
+      <span>control</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="18">
+      <span>option</span>
+    </div>
+    <div class="key--bottom-right key--word key--w3" data-key="91">
+      <span>command</span>
+    </div>
+    <div class="key--double key--right key--space" data-key="32" data-char=" ">
+      &nbsp;
+    </div>
+    <div class="key--bottom-left key--word key--w3" data-key="93-R">
+      <span>command</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="18-R">
+      <span>option</span>
+    </div>
+    <!-- <div data-key="37" class="key--arrow">
+      <span>&#9664;</span>
+    </div>
+    <div class="key--double key--arrow--tall" data-key="38">
+      <div>&#9650;</div>
+      <div>&#9660;</div>
+    </div>
+    <div data-key="39" class="key--arrow">
+      <span>&#9654;</span>
+    </div> -->
+  </div>
+</div>
+        </form>
+    </div>
+
+    <script>
+        var audioPlayed = false;
+
+document.body.addEventListener('click', function() {
+    if (!audioPlayed) {
+        var audio = new Audio('sounds/billingpagefront.mp3');
+        audio.play();
+        audioPlayed = true;
+    }
+});
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItemsElement = document.getElementById('cart-items');
+            const phonetag=  document.querySelectorAll("input")[1];
+            const addresstag=document.querySelectorAll("input")[0];
+
+            var audio; // Declare audio variable outside the event listeners
+
+phonetag.addEventListener('mouseover', function () {
+  audio = new Audio("sounds/enterphonenumber.mp3");
+  audio.play();
+});
+
+addresstag.addEventListener('mouseover', function () {
+  audio = new Audio("sounds/enteraddress.mp3");
+  audio.play();
+});
+
+addresstag.addEventListener('mouseleave', function () {
+  if (audio) {
+    audio.pause(); // Pause the audio
+    audio.currentTime = 0; // Reset the playback to the beginning
+  }
+});
+
+phonetag.addEventListener('mouseleave', function () {
+  if (audio) {
+    audio.pause(); // Pause the audio
+    audio.currentTime = 0; // Reset the playback to the beginning
+  }
+});
+
+            // if(phonetag.trim()===''){
+            //   var audio=new Audio("sounds/emptyphonenumber.mp3");
+            //   audio.play();
+            // }
+            // if(addresstag.trim()===''){
+            //   var audio=new Audio("sounds/emptyaddress.mp3");
+            //   audio.play();
+            // }
+            const billingForm = document.getElementById('billing-form');
+            const totalpriceElement = document.querySelector('.totalprice');
+            var cartproduct='';
+            
+            // Extract totalcartprice from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const totalcartprice = urlParams.get('totalcartprice');
+            
+            // Display totalcartprice on the billing page
+            if (totalcartprice !== null) {
+                totalpriceElement.textContent = `Total Cart Price: ₹${totalcartprice}`;
+            }
+            // Retrieve cart items from local storage
+            const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Function to render cart items on the billing page
+            function renderCartItems() {
+                savedCartItems.forEach(item => {
+                    cartproduct=cartproduct+item.description+" ";
+                    const li = document.createElement('li');
+                    li.textContent = item.description;
+                    cartItemsElement.appendChild(li);
+                    // const lineBreak = document.createElement('br');
+                    // cartItemsElement.appendChild(lineBreak);
+                });
+            }
+            const submitbutton=document.querySelectorAll("button")[0];
+            submitbutton.addEventListener('mouseover', function () {
+        audioo=new Audio("sounds/checkouttap.mp3");
+        audioo.play();
+    });
+
+    submitbutton.addEventListener('mouseleave', function () {
+        audioo.pause();
+        audioo.currentTime = 0;
+    });
+            // Event listener for form submission
+            billingForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Retrieve shipping information
+                const address = document.getElementById('address').value;
+                const phone = document.getElementById('phone').value;
+        //         if (address === ''|| phone==='') {
+        //     var emptyaddress = new Audio("sounds/pleaseaddress.mp3");
+        //     emptyaddress.play();
+        //     return; // Stop further processing if the fields are empty
+        // }
+        // else if(phone===''){
+        //   var emptyphone = new Audio("sounds/pleasephone.mp3");
+        //   emptyphone.play();
+        //   return;
+        // }
+                // Perform any additional processing or validation as needed
+                // ...
+                 // Prepare data to send to the backend
+        const requestData = {
+            totalcartprice: totalcartprice,
+            cartItems: cartproduct,//JSON.stringify(savedCartItems),
+            address: address,
+            phone: phone
+            // Add other form field values as needed
+        };
+        fetch('http://localhost:3000/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+        })
+        
+        // .then(response => response.json())
+        // // .then(data => {
+        // //     console.log(data.message); // Log the response from the server
+        // //     // Optionally, redirect the user to a thank you page or perform other actions
+        // //     window.location.href="thankyou.html";
+        // // })
+        .then(function(response) {
+        if (response.ok) {
+          console.log("Server is running!");
+        } else {
+          // console.log("Server is not running or returned an error.");
+          window.location.href="sorry.html";
+        }
+      })
+        .catch(error => console.error('Error:', error));
+        var sayy = new Audio("sounds/tankyou.mp3");
+    sayy.play();
+        setTimeout(function() {
+
+    // Redirect to the confirmation page (replace 'thankyou.html' with your actual confirmation page)
+    window.location.href = 'thankyou.html';
+}, 2000);
+
+            });
+        // fetch('http://localhost:3000/checkout',{
+        //   method:'HEAD'
+        // })
+      
+
+            // Initial rendering of cart items
+            renderCartItems();
+        });
+    </script>
+    <!-- <script  src="index5.js"></script> -->
+    <script src="index3.js"></script>
+</body>
+</html>
